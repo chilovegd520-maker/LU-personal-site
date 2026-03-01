@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的個人主頁</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;700&display=swap');
+        
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- 導覽列 -->
+    <nav class="fixed w-full z-50 glass-card shadow-sm">
+        <div class="max-w-5xl mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="text-xl font-bold text-indigo-600">MyProfile</div>
+            <div class="space-x-4">
+                <a href="#about" class="hover:text-indigo-500 transition">關於</a>
+                <a href="#skills" class="hover:text-indigo-500 transition">技能</a>
+                <a href="#contact" class="hover:text-indigo-500 transition">聯絡</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 英雄區塊 (Hero Section) -->
+    <header class="h-screen flex items-center justify-center gradient-bg text-white pt-16">
+        <div class="text-center px-4">
+            <!-- 修改這裡：換成你的名字 -->
+            <h1 class="text-5xl md:text-7xl font-bold mb-4">你好，我是 [你的名字]</h1>
+            <p class="text-xl md:text-2xl mb-8 opacity-90">一位熱愛學習與分享的網頁新手</p>
+            <a href="#about" class="bg-white text-indigo-600 px-8 py-3 rounded-full font-bold hover:bg-opacity-90 transition shadow-lg">
+                進一步了解我
+            </a>
+        </div>
+    </header>
+
+    <!-- 關於我 -->
+    <section id="about" class="py-20 px-4">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12">關於我</h2>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="rounded-2xl overflow-hidden shadow-2xl">
+                    <!-- 修改這裡：換成你的照片 URL -->
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&auto=format&fit=crop" alt="個人照" class="w-full h-auto">
+                </div>
+                <div>
+                    <h3 class="text-2xl font-semibold mb-4 text-indigo-600">背景故事</h3>
+                    <!-- 修改這裡：自我介紹內容 -->
+                    <p class="text-gray-600 leading-relaxed mb-4">
+                        這裡可以寫一些關於你的故事。例如：我目前正在學習網頁開發，對新技術充滿好奇心。雖然我是個「小小白」，但我相信只要持續努力，一定能做出很酷的東西。
+                    </p>
+                    <p class="text-gray-600 leading-relaxed">
+                        我平時喜歡閱讀、旅遊、吃美食，也喜歡研究如何優化生活效率。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 技能區塊 -->
+    <section id="skills" class="py-20 bg-indigo-50 px-4">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12">我的技能</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <!-- 修改這裡：更新你的技能項目 -->
+                <div class="bg-white p-6 rounded-xl shadow-md text-center hover:transform hover:-translate-y-2 transition">
+                    <div class="text-4xl mb-2">💡</div>
+                    <div class="font-bold">創意發想</div>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md text-center hover:transform hover:-translate-y-2 transition">
+                    <div class="text-4xl mb-2">✍️</div>
+                    <div class="font-bold">內容創作</div>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md text-center hover:transform hover:-translate-y-2 transition">
+                    <div class="text-4xl mb-2">🔍</div>
+                    <div class="font-bold">資料分析</div>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md text-center hover:transform hover:-translate-y-2 transition">
+                    <div class="text-4xl mb-2">🤝</div>
+                    <div class="font-bold">團隊協作</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 聯絡方式 -->
+    <section id="contact" class="py-20 px-4">
+        <div class="max-w-2xl mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-8">聯絡我</h2>
+            <p class="text-gray-600 mb-10">如果你有任何問題或合作機會，歡迎透過以下方式聯繫我：</p>
+            
+            <div class="flex flex-col space-y-4">
+                <!-- 修改這裡：填寫你的聯絡資訊 -->
+                <div class="flex items-center justify-center space-x-3 text-lg">
+                    <span class="text-indigo-600 font-bold">Email:</span>
+                    <span>yourname@example.com</span>
+                </div>
+                <div class="flex items-center justify-center space-x-3 text-lg">
+                    <span class="text-indigo-600 font-bold">LINE:</span>
+                    <span>my-id-123</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 頁尾 -->
+    <footer class="py-8 border-t border-gray-200 text-center text-gray-500 text-sm">
+        <p>© 2024 [你的名字]. 使用 HTML & Tailwind CSS 製作</p>
+    </footer>
+
+</body>
+</html>
